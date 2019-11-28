@@ -1,8 +1,8 @@
-*/Build
-*/Binaries
-*/DerivedDataCache
-*/Intermediate
-*/Saved
-BuildingEscape/Content/StarterContent/
+Build
+Binaries
+DerivedDataCache
+Intermediate
+Saved
+Content/StarterContent/
 *.VC.db
-*/.vs
+.vs

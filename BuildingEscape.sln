@@ -58,8 +58,8 @@ Global
 		{E14B92EE-515F-4D75-A793-770B4EA53395}.DebugGame|HTML5.Build.0 = HTML5_DebugGame|Win32
 		{E14B92EE-515F-4D75-A793-770B4EA53395}.DebugGame|Win32.ActiveCfg = DebugGame|Win32
 		{E14B92EE-515F-4D75-A793-770B4EA53395}.DebugGame|Win32.Build.0 = DebugGame|Win32
-		{E14B92EE-515F-4D75-A793-770B4EA53395}.DebugGame|Win64.ActiveCfg = DebugGame|x64
-		{E14B92EE-515F-4D75-A793-770B4EA53395}.DebugGame|Win64.Build.0 = DebugGame|x64
+		{E14B92EE-515F-4D75-A793-770B4EA53395}.DebugGame|Win64.ActiveCfg = DebugGame|Win32
+		{E14B92EE-515F-4D75-A793-770B4EA53395}.DebugGame|Win64.Build.0 = DebugGame|Win32
 		{E14B92EE-515F-4D75-A793-770B4EA53395}.Development Editor|HTML5.ActiveCfg = Invalid|Win32
 		{E14B92EE-515F-4D75-A793-770B4EA53395}.Development Editor|Win32.ActiveCfg = Invalid|Win32
 		{E14B92EE-515F-4D75-A793-770B4EA53395}.Development Editor|Win64.ActiveCfg = Development_Editor|x64
@@ -83,5 +83,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{948588D6-E45E-4558-B821-CE333EA8E574} = {5FDBC8D4-EA89-45AC-84F7-2660677A043C}
 		{E14B92EE-515F-4D75-A793-770B4EA53395} = {4E0D5892-024E-4BF1-BB05-C4A98DB03D98}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {946733EA-F2AA-48F8-971D-884EDE25922F}
 	EndGlobalSection
 EndGlobal

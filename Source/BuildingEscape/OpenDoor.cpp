@@ -2,7 +2,7 @@
 
 
 #include "OpenDoor.h"
-#include "Gameframework/Actor.h"
+#include "GameFramework/Actor.h"
 #include "Engine/World.h"
 #include "GameFramework/PlayerController.h"
 
@@ -14,37 +14,23 @@ UOpenDoor::UOpenDoor()
 	PrimaryComponentTick.bCanEverTick = true;
 }
 
-
 // Called when the game starts
 void UOpenDoor::BeginPlay()
 {
 	Super::BeginPlay();
-
+	Owner = GetOwner();
 	ActorThatOpens = GetWorld()->GetFirstPlayerController()->GetPawn();
 }
 
 void UOpenDoor::OpenDoor()
 {
-	AActor* Owner = GetOwner();
-
-	FRotator NewRotation = FRotator(0.f, 120.f, 0.f);
-
-	Owner->SetActorRotation(NewRotation);
-
-	UE_LOG(LogTemp, Warning, TEXT("We opened the door"));
+	Owner->SetActorRotation(FRotator(0.f, 120.f, 0.f));
 }
 
 void UOpenDoor::CloseDoor()
 {
-	AActor* Owner = GetOwner();
-
-	FRotator NewRotation = FRotator(0.f, 0.f, 0.f);
-
-	Owner->SetActorRotation(NewRotation);
-
-	UE_LOG(LogTemp, Warning, TEXT("We closed the door"));
+	Owner->SetActorRotation(FRotator(0.f, 0.f, 0.f));
 }
-
 
 // Called every frame
 void UOpenDoor::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
@@ -58,7 +44,5 @@ void UOpenDoor::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompon
 	else {
 		CloseDoor();
 	}
-
-	
 }
 

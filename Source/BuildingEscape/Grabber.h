@@ -6,17 +6,17 @@
 #include "Components/ActorComponent.h"
 #include "PhysicsEngine/PhysicsHandleComponent.h"
 #include "Components/InputComponent.h"
-#include "Grabber_1.generated.h"
+#include "Grabber.generated.h"
 
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
-class BUILDINGESCAPE_API UGrabber_1 : public UActorComponent
+class BUILDINGESCAPE_API UGrabber : public UActorComponent
 {
 	GENERATED_BODY()
 
 public:	
 	// Sets default values for this component's properties
-	UGrabber_1();
+	UGrabber();
 
 protected:
 	// Called when the game starts
@@ -34,8 +34,14 @@ private:
 
 	UInputComponent* InputComponent = nullptr;
 
+	void FindPhysicsHandleComponent();
+
+	void SetupInputComponent();
+
 	// Ray-cast and grab what is in reach
 	void Grab();
 
 	void Release();
+
+	const FHitResult GetFirstPhysicsBodyInReach();
 };
